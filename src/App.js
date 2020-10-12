@@ -13,6 +13,7 @@ import "./App.css";
 // import BaiTapThucHanhLayout from "./Components/BaiTapThucHanhLayout/BaiTapThucHanhLayout";
 import BaiTapGioHang from "./Components/BaiTapGioHang";
 import BaiTapGioHangRedux from "./BaiTapRedux/BaiTapGioHangRedux";
+import BaiTapGameXucXac from "./BaiTapRedux/BaiTapGameXucXac/BaiTapGameXucXac";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       {/* <DemoProps></DemoProps> */}
       {/* <BaiTapThucHanhLayout></BaiTapThucHanhLayout> */}
       {/* <BaiTapGioHang></BaiTapGioHang> */}
-      <BaiTapGioHangRedux/>
+      {/* <BaiTapGioHangRedux/> */}
+      <BaiTapGameXucXac/>
     </div>
   );
 }

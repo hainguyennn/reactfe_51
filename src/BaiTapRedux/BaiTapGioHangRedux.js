@@ -4,14 +4,14 @@ import GioHangRedux from "./GioHangRedux";
 import SanPhamRedux from "./SanPhamRedux";
 export default class BaiTapGioHangRedux extends Component {
   renderSanPham = () => {
-    return danhSachSanPham.map((sanPham, index) => {
+     return danhSachSanPham.map((sanPham, index) => {
       return (
         <div className="col-4" key={index}>
           <SanPhamRedux sanPham={sanPham} />
         </div>
       );
     });
-  };
+  } 
 
   render() {
     return (
