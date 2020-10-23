@@ -3,7 +3,7 @@ const stateDefault = {
     mangXucXac: [
         { so: 6, hinhAnh: "./img/BaiTapGameXucXac/2.png" },
         { so: 6, hinhAnh: "./img/BaiTapGameXucXac/4.png" },
-        { so: 6, hinhAnh: "./img/BaiTapGameXucXac/3.png" },
+        { so: 6, hinhAnh: "./img/BaiTapGameXucXac/3.png" }
     ],
     soBanThang: 0,
     tongSoBanChoi: 0,

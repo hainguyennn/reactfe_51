@@ -33,7 +33,7 @@ function App() {
       {/* <BaiTapThucHanhLayout></BaiTapThucHanhLayout> */}
       {/* <BaiTapGioHang></BaiTapGioHang> */}
       {/* <BaiTapGioHangRedux/> */}
-      {/* <BaiTapGameXucXac/> */}
+      {/* <BaiTapGameXucXac /> */}
       {/* <LifeCycle /> */}
       <DanhSachNguoiDung />
     </div>
