@@ -76,14 +76,14 @@ class NewFormComponent extends Component {
                 let valid = true;
                 // Duyệt thuộc tính trong object values (duyệt thuộc tính trong đối tượng thì dùng ES6 for in)
                 for (let tenThuocTinh in this.props.stateForm.value) {
-                    if (this.props.stateForm.value[tenThuocTinh].trim() === '') {
+                    if (this.props.stateForm.value[tenThuocTinh].toString().trim() === '') {
                         valid = false;
                     }
                 }
 
                 // DUyệt lỗi => tất cả lỗi phải = rỗng
                 for (let tenThuocTinh in this.props.stateForm.error) {
-                    if (this.props.stateForm.error[tenThuocTinh].trim() !== '') {
+                    if (this.props.stateForm.error[tenThuocTinh].toString().trim() !== '') {
                         valid = false;
                     }
                 }
@@ -95,12 +95,6 @@ class NewFormComponent extends Component {
                 }
                 sweetalert.fire('Thông báo', 'Thêm người dùng thành công', 'success');
                 console.log('submit');
-
-                let action = {
-                    type: 'THEM_NGUOI_DUNG',
-                    nguoiDung: this.props.stateForm.value
-                }
-                this.props.dispatch(action)
             }}>
 
                 <div className="card text-left">
@@ -133,7 +127,13 @@ class NewFormComponent extends Component {
                                 </div>
                             </div>
                             <div className="col-12 text-center">
-                                <button className="btn btn-info mx-2">Thêm người dùng</button>
+                                <button onClick={() => {
+                                    let action = {
+                                        type: 'THEM_NGUOI_DUNG',
+                                        nguoiDung: this.props.stateForm.value
+                                    }
+                                    this.props.dispatch(action)
+                                }} className="btn btn-info mx-2">Thêm người dùng</button>
                                 <button onClick={() => {
                                     let action = {
                                         type: 'CAP_NHAT_THONG_TIN',
